@@ -39,8 +39,6 @@ function sendMessage(e){
     msgInput.value = "";
 }
 
-msgRef.on('child_added', updateMsgs);
-
 const updateMsgs = data =>{
   const {dataName, text} = data.val(); //get name and text
 
@@ -55,6 +53,10 @@ const updateMsgs = data =>{
   //auto scroll to bottom
   document.getElementById("chat-window").scrollTop = document.getElementById("chat-window").scrollHeight;
 }
+
+msgRef.on('child_added', updateMsgs);
+
+
 
 
 
