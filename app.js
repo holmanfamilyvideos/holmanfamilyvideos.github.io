@@ -31,9 +31,12 @@ function sendMessage(e){
    const gname = name.value;
     if(!gname.trim()){
       document.getElementById("msg-name").focus();
-      return alert('Please enter Name');
+      return alert('Please enter your name');
     }
-    if(!text.trim()) return alert('Please type a message'); //no msg submitted
+    if(!text.trim()) {
+       document.getElementById("msg-input").focus();
+      return alert('Please type a message'); //no msg submitted
+    }
     const msg = {
         name: gname.toUpperCase(),
         text: text
