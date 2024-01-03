@@ -41,10 +41,10 @@ function sendMessage(e){
 }
 
 const updateMsgs = data =>{
-  const {dataName, text} = data.val(); //get name and text
+  const {name, text} = data.val(); //get name and text
 
   //load messages, display on left if not the user's name. Display on right if it is the user.
-  const msg = `<li class="${dataName === name ? "msg my": "msg"}"><span class = "msg-span">
+  const msg = `<li class="${name === name ? "msg my": "msg"}"><span class = "msg-span">
     <i class = "name">${name}: </i>${text}
     </span>
   </li>`
