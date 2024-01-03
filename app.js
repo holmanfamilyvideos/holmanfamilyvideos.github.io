@@ -13,6 +13,7 @@ firebase.initializeApp(firebaseConfig);
 const msgScreen = document.getElementById("messages"); //the <ul> that displays all the <li> msgs
 const msgForm = document.getElementById("messageForm"); //the input form
 const msgInput = document.getElementById("msg-input"); //the input element to write messages
+const name = document.getElementById("msg-name"); //the input element to write messages
 const msgBtn = document.getElementById("msg-btn"); //the Send button
 
 const db = firebase.database();
@@ -20,7 +21,6 @@ const msgRef = db.ref("/msgs");
 //to store data in the msgs folder by creating a reference in database
 let name="";
 function init() {
-  name = prompt("Please enter your name");
   msgRef.on('child_added', updateMsgs);
 }
 document.addEventListener('DOMContentLoaded', init);
@@ -30,15 +30,16 @@ function sendMessage(e){
   e.preventDefault();
   const text = msgInput.value;
    const gname = name.value;
-    if(!gname.trim()) return name = prompt("Please enter your name"); 
+    if(!gname.trim()) return alert('Please enter Name');
     if(!text.trim()) return alert('Please type a message'); //no msg submitted
     const msg = {
-        name: name,
+        name: name.toUpperCase(),
         text: text
     };
 
     msgRef.push(msg);
     msgInput.value = "";
+    gname.value = name.toUpperCase();
 }
 
 const updateMsgs = data =>{
