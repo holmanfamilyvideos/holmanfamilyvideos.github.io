@@ -1,6 +1,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyDgPUjJKjpOFar52kwCXfUJp7MTqLQgfWk",
   authDomain: "holmanfamilyvideos-41aec.firebaseapp.com",
+  databaseURL: "https://holmanfamilyvideos-41aec-default-rtdb.firebaseio.com",
   projectId: "holmanfamilyvideos-41aec",
   storageBucket: "holmanfamilyvideos-41aec.appspot.com",
   messagingSenderId: "437560471466",
