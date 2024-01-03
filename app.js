@@ -38,7 +38,7 @@ function sendMessage(e){
 
     msgRef.push(msg);
     msgInput.value = "";
-    gname.value = name.toUpperCase();
+    gname.value = gname.toUpperCase();
 }
 
 const updateMsgs = data =>{
