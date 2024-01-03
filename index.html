@@ -36,6 +36,28 @@ iframe[src*=youtube] {
 <hr>
 <h4><a href="https://drive.google.com/drive/folders/1T5MzQ2MSBEj48sXv6I3CM7YvTwsXlH79">Click here to download videos for USB drive, etc.</a></h4>
 <br><br>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script> 
+<div class = "chat">
+        <div class = "chat-window" id = "chat-window">
+          <ul id = "messages">
+            <li class="msg">
+              <span class = "msg-span">
+                <i class = "name">Host: </i>Hello and welcome to the chat!
+              </span>
+            </li>
+            <li class="msg my">
+              <span class = "msg-span">
+                <i class = "name">Me: </i>My message is on the right
+              </span>
+            </li>
+          </ul>
+          <form id = "messageForm" autocomplete="off">
+            <input type = "text" id = "msg-input" placeholder="Enter a message">
+            <button id = "msg-btn" type = "submit">Send</button>
+          </form>
+        </div>
+      </div>
+
 </center>
 </body>
 
