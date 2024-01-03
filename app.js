@@ -45,7 +45,7 @@ const updateMsgs = data =>{
   const {name, text} = data.val(); //get name and text
 
   //load messages, display on left if not the user's name. Display on right if it is the user.
-  const msg = `<li class="${name === name ? "msg my": "msg"}"><span class = "msg-span">
+  const msg = `<li class="${name === name ? "msg my": "msg"}"><span class = "msg-span" style="font-family: cursive;font-size: small;">
     <i class = "name">${name}: </i>${text}
     </span>
   </li>`
