@@ -14,7 +14,7 @@ const msgForm = document.getElementById("messageForm"); //the input form
 const msgInput = document.getElementById("msg-input"); //the input element to write messages
 const msgBtn = document.getElementById("msg-btn"); //the Send button
 
-const db = firebase.database();
+const db = firebase.firestore();
 const msgRef = db.ref("/msgs"); 
 //to store data in the msgs folder by creating a reference in database
 let name="";
