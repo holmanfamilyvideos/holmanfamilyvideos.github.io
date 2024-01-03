@@ -32,7 +32,7 @@ function sendMessage(e){
     if(!gname.trim()) return alert('Please enter Name');
     if(!text.trim()) return alert('Please type a message'); //no msg submitted
     const msg = {
-        name: name.toUpperCase(),
+        name: gname.toUpperCase(),
         text: text
     };
 
