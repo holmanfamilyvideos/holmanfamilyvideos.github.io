@@ -19,7 +19,6 @@ const msgBtn = document.getElementById("msg-btn"); //the Send button
 const db = firebase.database();
 const msgRef = db.ref("/msgs"); 
 //to store data in the msgs folder by creating a reference in database
-let name="";
 function init() {
   msgRef.on('child_added', updateMsgs);
 }
