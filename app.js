@@ -29,7 +29,8 @@ msgForm.addEventListener('submit', sendMessage);
 function sendMessage(e){
   e.preventDefault();
   const text = msgInput.value;
-
+   const gname = name.value;
+    if(!gname.trim()) return name = prompt("Please enter your name"); 
     if(!text.trim()) return alert('Please type a message'); //no msg submitted
     const msg = {
         name: name,
