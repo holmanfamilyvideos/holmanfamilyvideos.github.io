@@ -30,7 +30,7 @@ function sendMessage(e){
   const text = msgInput.value;
    const gname = name.value;
     if(!gname.trim()){
-      document.getElementById("gname").focus();
+      document.getElementById("msg-name").focus();
       return alert('Please enter Name');
     }
     if(!text.trim()) return alert('Please type a message'); //no msg submitted
