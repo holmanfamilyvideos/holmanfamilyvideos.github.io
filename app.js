@@ -21,6 +21,7 @@ const msgRef = db.ref("/msgs");
 let name="";
 function init() {
   name = prompt("Please enter your name");
+  msgRef.on('child_added', updateMsgs);
 }
 document.addEventListener('DOMContentLoaded', init);
 msgForm.addEventListener('submit', sendMessage);
@@ -54,7 +55,6 @@ const updateMsgs = data =>{
   document.getElementById("chat-window").scrollTop = document.getElementById("chat-window").scrollHeight;
 }
 
-msgRef.on('child_added', updateMsgs);
 
 
 
