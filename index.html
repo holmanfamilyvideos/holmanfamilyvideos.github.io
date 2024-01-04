@@ -63,14 +63,6 @@ iframe[src*=youtube] {
         <div class = "chat">
           <center><b style="font-size: 20px;">Family Chat!</b></center>
             <div class="chat-window" id="chat-window" style="display: table;margin: 0 auto;">
-              <ul><li>CHUCK: </i>What's up? Leave a Post!</li></ul>
-              <form id = "messageForm" autocomplete="off">
-                <input type = "text" style="text-transform: uppercase;width: 135px;" id = "msg-name" placeholder="Enter Your Name"><br>
-               <textarea id="msg-input" name="msg-input" rows="3" cols="30" placeholder="Enter a message > Send"></textarea>
-                    <br>
-                <button id = "msg-btn" type = "submit">Send</button>
-              </form>
-              <center><h3>View Posts</h3></center>
               <ul id = "messages">
                   <li class="msg">
                     <span class="msg-span" style="font-family: sans-serif;font-size: small;">
@@ -79,7 +71,12 @@ iframe[src*=youtube] {
                     </li>
                  
                </ul>
-              
+               <form id = "messageForm" autocomplete="off">
+                <input type = "text" style="text-transform: uppercase;width: 135px;" id = "msg-name" placeholder="Enter Your Name"><br>
+               <textarea id="msg-input" name="msg-input" rows="3" cols="30" placeholder="Enter a message > Send"></textarea>
+                    <br>
+                <button id = "msg-btn" type = "submit">Send</button>
+              </form>
               </div>
 
       </div>
